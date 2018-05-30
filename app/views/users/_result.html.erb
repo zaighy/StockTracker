@@ -16,7 +16,7 @@
         Stock can't be added because you have already added:
       </span>
       <% if !current_user.under_stock_limit? %>
-        <span class="label label-danger" style="margin-left: 5px;">
+        <span class="label label-warning" style="margin-left: 5px;">
           10 stocks!
         </span>
       <% end %>
