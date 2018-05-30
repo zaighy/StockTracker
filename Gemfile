@@ -18,12 +18,10 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'devise'
 gem 'jquery-rails'
-gem "therubyracer"
-gem "less-rails"
-gem 'sprockets'
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 gem "stock_quote"
+gem "font-awesome-rails"
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

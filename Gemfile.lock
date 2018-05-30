@@ -87,6 +87,8 @@ GEM
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.23)
+    font-awesome-rails (4.7.0.4)
+      railties (>= 3.2, < 6.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     http-cookie (1.0.3)
@@ -109,7 +111,6 @@ GEM
       less (~> 2.6.0)
       sprockets (> 2, < 4)
       tilt
-    libv8 (3.16.14.19)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -169,7 +170,6 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    ref (2.0.0)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
@@ -209,9 +209,6 @@ GEM
     stock_quote (2.0.0)
       json
       rest-client (~> 2.0.2)
-    therubyracer (0.12.3)
-      libv8 (~> 3.16.14.15)
-      ref
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
@@ -254,9 +251,9 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   devise-bootstrap-views
+  font-awesome-rails
   jbuilder (~> 2.5)
   jquery-rails
-  less-rails
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.11)
   rails (~> 5.2.0)
@@ -264,10 +261,8 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
-  sprockets
   sqlite3
   stock_quote
-  therubyracer
   turbolinks (~> 5)
   twitter-bootstrap-rails
   tzinfo-data
