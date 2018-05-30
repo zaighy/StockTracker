@@ -3,10 +3,14 @@ class Stock < ApplicationRecord
   has_many :user_stocks
   has_many :users, through: :user_stocks
 
+  def self.find_by_ticker(ticker_name)
+    where(ticker: ticker_name).first
+  end
+
   def self.new_from_lookup(ticker_name)
     begin
-    looked_up_stock = StockQuote::Stock.quote(ticker_name)
-    new(name: looked_up_stock.company_name,
+      looked_up_stock = StockQuote::Stock.quote(ticker_name)
+      new(name: looked_up_stock.company_name,
         ticker: looked_up_stock.symbol,
         last_price: looked_up_stock.latest_price)
     rescue Exception => e
