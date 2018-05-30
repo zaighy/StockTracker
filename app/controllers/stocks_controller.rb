@@ -3,22 +3,14 @@ class StocksController < ApplicationController
   def search
 
     if StocksHelper::empty_string params[:stock]
-      @stock = Stock.new_from_lookup(params[:stock])
-
-      if @stock
-        respond_to do |format|
-          format.js { render partial: 'users/result' }
-        end
-        else
-        flash[:danger] = "Incorrent Symbol for Stock"
-        redirect_to portfolio_path
-      end
-
+      flash.now[:danger] = "Entered Empty Search String"
     else
-      flash[:danger] = "Entered Empty Search String"
-      redirect_to portfolio_path
+      @stock = Stock.new_from_lookup(params[:stock])
+      flash.now[:danger] = "Incorrent Symbol for Stock" unless @stock
     end
-
+    respond_to do |format|
+      format.js { render partial: 'users/result' }
+    end
   end
 
 end

@@ -1,5 +1,5 @@
 module StocksHelper
   def self.empty_string(stock)
-    stock.present?
+    stock.blank?
   end
 end
