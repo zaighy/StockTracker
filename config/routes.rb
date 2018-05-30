@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'friends', to: 'users#friends'
   post 'search_friends', to: 'users#search'
   post 'add_friend', to: 'users#add_friend'
+  get 'refresh_prices', to: 'stocks#refresh_prices'
 
   resources :users, only: [:show]
   resources :friendships

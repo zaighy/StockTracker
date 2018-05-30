@@ -23,7 +23,11 @@
   <% end %>
 
 </div>
+
 <div id="results">
   <%= render 'users/result' %>
 </div>
+
 <%= render 'stocks/list' %>
+
+<%= link_to "Refresh Prices", refresh_prices_path, class: "btn btn-md btn-primary" %>
